@@ -1,0 +1,12 @@
+import pyupbit
+import numpy as np
+
+#open high low close volume에 대한 정보를 불러옴 count=7 은 7일치
+df = pyupbit.get_ohlcv("KRW-BTC", count=365)   #count=7 은 7일 치  / ohlcv open higl low close volume
+df1 = pyupbit.get_ohlcv("KRW-XRP", count=365)
+df2 = pyupbit.get_ohlcv("KRW-ETH", count=365)
+
+
+df.to_excel("btc.xlsx")
+df1.to_excel("xrp.xlsx")
+df2.to_excel("eth.xlsx")
